@@ -780,6 +780,14 @@ const struct riscv_opcode riscv_opcodes[] =
 {"sfence.vma", 0, INSN_CLASS_I,   "s,t",  MATCH_SFENCE_VMA, MASK_SFENCE_VMA, match_opcode, 0 },
 {"wfi",        0, INSN_CLASS_I,   "",     MATCH_WFI, MASK_WFI, match_opcode, 0 },
 
+/* branch counter instructions */
+{"bcntson",    0, INSN_CLASS_I,   "",     MATCH_BCNTSON, MASK_BCNTSON, match_opcode, 0 },
+{"bcntsoff",   0, INSN_CLASS_I,   "",     MATCH_BCNTSOFF, MASK_BCNTSOFF, match_opcode, 0 },
+{"bcntrst",    0, INSN_CLASS_I,   "",     MATCH_BCNTRST, MASK_BCNTRST, match_opcode, 0 },
+{"btcntrst",   0, INSN_CLASS_I,   "",     MATCH_BTCNTRST, MASK_BTCNTRST, match_opcode, 0 },
+{"bcntrd",     0, INSN_CLASS_I,   "d",    MATCH_BCNTRD, MASK_BCNTRD, match_opcode, 0 },
+{"btcntrd",    0, INSN_CLASS_I,   "d",    MATCH_BTCNTRD, MASK_BTCNTRD, match_opcode, 0 },
+
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
 };
